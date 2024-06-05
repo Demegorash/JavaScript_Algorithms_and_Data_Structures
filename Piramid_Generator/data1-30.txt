@@ -273,3 +273,167 @@ Update the third element of your rows array to be the number 10. Then print the 
 
 ******************************************************************************************************************************************************************************
 
+let character = 'Hello';
+let count = 8;
+let rows = ["Naomi", "Quincy", "CamperChan"];
+console.log(rows[0]);
+
+Step 21
+Notice how the value inside your rows array has been changed directly? This is called mutation. As you learn more about arrays, you will learn when to mutate an array, and when you should not.
+
+Before moving on, this is a great opportunity to learn a common array use. Currently, your code accesses the last element in the array with rows[2]. But you may not know how many elements are in an array when you want the last one.
+
+You can make use of the .length property of an array - this returns the number of elements in the array. To get the last element of any array, you can use the following syntax:
+
+array[array.length - 1]
+array.length returns the number of elements in the array. By subtracting 1, you get the index of the last element in the array. You can apply this same concept to your rows array.
+
+Update your rows[2] to dynamically access the last element in the rows array. Refer to the example above to help you.
+
+You should not see anything change in your console.
+
+rows[2] = 10;
+
+******************************************************************************************************************************************************************************
+
+let character = 'Hello';
+let count = 8;
+let rows = ["Naomi", "Quincy", "CamperChan"];
+
+Step 22
+For now, remove your first console log and your rows[rows.length - 1] assignment. Leave the second rows log statement for later.
+
+console.log(rows[0]);
+rows[rows.length - 1] = 10;
+
+console.log(rows);
+
+******************************************************************************************************************************************************************************
+
+let character = 'Hello';
+let count = 8;
+
+Step 23
+A method in JavaScript is a function that's associated with certain values or objects. An example you've already encountered is the .log() method, which is part of the console object.
+
+Arrays have their own methods, and the first you will explore is the .push() method. This allows you to "push" a value to the end of an array. Here is an example to add the number 12 to the end of an array:
+
+array.push(12);
+Use .push() to add the string "freeCodeCamp" to the end of your rows array. Add this code before your console.log so you can see the change you made to your array.
+
+let rows = ["Naomi", "Quincy", "CamperChan"];
+
+console.log(rows);
+
+******************************************************************************************************************************************************************************
+
+let character = 'Hello';
+let count = 8;
+
+Step 24
+Another method essential for this project is the .pop() method. It removes the last element from an array and returns that element.
+
+When a method returns a value, you can think of it as giving the value back to you, making it available for use in other parts of your code.
+
+Create a new variable called popped and assign it the result of rows.pop(). Then, log popped to the console.
+
+let rows = ["Naomi", "Quincy", "CamperChan"];
+rows.push("freeCodeCamp");
+
+console.log(rows);
+
+******************************************************************************************************************************************************************************
+
+let character = 'Hello';
+let count = 8;
+let rows = ["Naomi", "Quincy", "CamperChan"];
+
+Step 25
+You should have seen "freeCodeCamp" printed to the console. This is because .pop() returns the value that was removed from the array - and you pushed "freeCodeCamp" to the end of the array earlier.
+
+But what does .push() return? Assign your existing rows.push() to a new pushed variable, and log it.
+
+rows.push("freeCodeCamp");
+
+let popped = rows.pop();
+console.log(popped);
+console.log(rows);
+
+******************************************************************************************************************************************************************************
+
+let character = 'Hello';
+let count = 8;
+let rows = ["Naomi", "Quincy", "CamperChan"];
+
+Step 26
+Were you expecting to see 4 in the console? .push() returns the new length of the array, after adding the value you give it.
+
+It is important to be aware of what values a method returns. Take some time to experiment with .push() and .pop(). When you are ready, remove all of your .push() and .pop() calls, and your console.log statements
+
+let pushed = rows.push("freeCodeCamp");
+console.log(pushed);
+let popped = rows.pop();
+console.log(popped);
+console.log(rows);
+
+******************************************************************************************************************************************************************************
+
+Step 27
+Change your rows declaration to be assigned an empty array again.
+
+Also, change your 'Hello' string to use double quotes again. Generally, it does not matter which of the two you prefer, but you will want to be consistent in that choice throughout your project.
+
+let character = 'Hello';
+let count = 8;
+let rows = ["Naomi", "Quincy", "CamperChan"];
+
+******************************************************************************************************************************************************************************
+
+Step 28
+Declaring a variable with the let keyword allows it to be reassigned. This means you could change character later to be a completely different value.
+
+For this project, you will not want to change these variable values. So instead, you should use const to declare them. const variables are special.
+
+First, a const variable cannot be reassigned like a let variable. This code would throw an error:
+
+const firstName = "Naomi";
+firstName = "Jessica";
+
+A const variable also cannot be uninitialized. This code would throw an error:
+
+Replace your let keywords with const.
+
+let character = "Hello";
+let count = 8;
+let rows = [];
+
+******************************************************************************************************************************************************************************
+
+Step 29
+You are now ready to start building your pyramid generator. Your character variable will serve as the building block for the pyramid.
+
+"Hello" might not work very well for that. Change the value of character to be the hash character "#".
+
+const character = "Hello";
+const count = 8;
+const rows = [];
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+Step 30
+To generate a pyramid, you will need to create multiple rows. When you have to perform a task repeatedly until a condition is met, you will use a loop. There are many ways to write a loop.
+
+You are going to start with a basic for loop. for loops use the following syntax:
+
+for (iterator; condition; iteration) {
+  logic;
+}
+
+In the upcoming steps, you'll explore each component of a loop in detail. For now, construct a for loop that includes the terms "iterator", "condition", and "iteration" for the three components. Keep the loop body, the section within the curly braces {}, empty.
+
+******************************************************************************************************************************************************************************
+
