@@ -1255,3 +1255,168 @@ console.log(result);
 
 ******************************************************************************************************************************************************************************
 
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return character.repeat(rowNumber);
+}
+
+Step 61
+A function call allows you to actually use a function. You may not have been aware of it, but the methods like .push() that you have been using have been function calls.
+
+A function is called by referencing the function's name, and adding (). Here's how to call a test function:
+
+test();
+
+Replace the character.repeat(i + 1) in your .push() call with a function call for your padRow function.
+
+for (let i = 0; i < count; i = i + 1) {
+  rows.push(character.repeat(i + 1));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return character.repeat(rowNumber);
+}
+
+Step 62
+Your padRow function has two parameters which you defined. Values are provided to those parameters when a function is called.
+
+The values you provide to a function call are referred to as arguments, and you pass arguments to a function call. Here's a function call with "Hello" passed as an argument:
+
+test("Hello");
+
+Pass i + 1 and count as the arguments to your padRow call. Like parameters, arguments are separated by a comma.
+
+for (let i = 0; i < count; i = i + 1) {
+  rows.push(padRow());
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+Step 63
+You should now see the same bunch of characters in your console. Your padRow function is doing the exact same thing you were doing earlier, but now it's in a reusable section of its own.
+
+Use the addition operator to concatenate a blank space " " to the beginning and end of your repeated character string.
+
+Remember that you can use the + operator to concatenate strings like this:
+
+" " + "string"
+
+function padRow(rowNumber, rowCount) {
+  return character.repeat(rowNumber);
+}
+
+for (let i = 0; i < count; i = i + 1) {
+  rows.push(padRow(i + 1, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+Step 64
+Now it is time for a bit of math. Consider a three-row pyramid. If we want it centered, it would look something like:
+
+··#··
+·###·
+#####
+
+Empty spaces have been replaced with interpuncts, or middle dots, for readability. If you extrapolate the pattern, you can see that the spaces at the beginning and end of a row follow a pattern.
+
+Update your blank space strings to be repeated rowCount - rowNumber times.
+
+Open up the console to see the result.
+
+function padRow(rowNumber, rowCount) {
+  return " " + character.repeat(rowNumber) + " ";
+}
+
+for (let i = 0; i < count; i = i + 1) {
+  rows.push(padRow(i + 1, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+Step 65
+You can pass full expressions as an argument. The function will receive the result of evaluating that expression. For example, these two function calls would yield the same result:
+
+test(2 * 3 + 1);
+test(7);
+
+Looking at the pattern again:
+
+··#··
+·###·
+#####
+
+Update the character value to be repeated 2 * rowNumber - 1 times.
+
+Open up the console again to see the updated result.
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(rowNumber) + " ".repeat(rowCount - rowNumber);
+}
+
+for (let i = 0; i < count; i = i + 1) {
+  rows.push(padRow(i + 1, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
