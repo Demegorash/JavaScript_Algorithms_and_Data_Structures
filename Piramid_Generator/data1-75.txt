@@ -1420,3 +1420,309 @@ for (const row of rows) {
 console.log(result);
 
 ******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+Step 66
+Your pyramid generator now functions as expected. But this is an excellent opportunity to further explore the code you have written.
+
+The addition operator is not the only way to add values to a variable. The addition assignment operator can be used as shorthand to mean "take the original value of the variable, add this value, and assign the result back to the variable." For example, these two statements would yield the same result:
+
+test = test + 1;
+test += 1;
+
+Update your iterator statement in the for loop to use addition assignment.
+
+for (let i = 0; i < count; i = i + 1) {
+
+    rows.push(padRow(i + 1, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+Step 67
+Because you are only increasing i by 1, you can use the increment operator ++. This operator increases the value of a variable by 1, updating the assignment for that variable. For example, test would become 8 here:
+
+let test = 7;
+test++;
+
+for (let i = 0; i < count; i += 1) {
+
+    rows.push(padRow(i + 1, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+Step 68
+Rather than having to pass i + 1 to your padRow call, you could instead start your loop at 1. This would allow you to create a one-indexed loop.
+
+Update your iterator to start at 1 instead of 0.
+
+for (let i = 0; i < count; i++) {
+  rows.push(padRow(i + 1, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+Step 69
+The pyramid looks a little funny now. Because you are starting the loop at 1 instead of 0, you do not need to add one to i when you pass it to padRow.
+
+Update the first argument of your padRow call to be i.
+
+for (let i = 1; i < count; i++) {
+  rows.push(padRow(i + 1, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+Step 70
+Unfortunately, now the bottom of the pyramid has disappeared. This is because you have created another off-by-one error.
+
+Your original loop went for i values from 0 to 7, because count is 8 and your condition requires i to be less than count. Your loop is now running for i values from 1 to 7.
+
+Your loop needs to be updated to run when i is 8, too. Looking at your logic, this means your loop should run when i is less than or equal to count. You can use the less than or equal to operator <= for this.
+
+Update your loop condition to run while i is less than or equal to count.
+
+for (let i = 1; i < count; i++) {
+  rows.push(padRow(i, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+Step 71
+Comments can be helpful for explaining why your code takes a certain approach, or leaving to-do notes for your future self.
+
+In JavaScript, you can use // to leave a single-line comment in your code.
+
+Add a single-line comment above your function to remind yourself to change the code to a different kind of loop.
+
+for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+
+Step 72
+JavaScript also has support for multi-line comments. A multi-line comment starts with /* and ends with */.
+
+Unlike a single-line comment, a multi-line comment will encapsulate multiple lines.
+
+Use /* and */ to turn your current for loop, including the body, into a multi-line comment.
+
+for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+/*for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}*/
+
+Step 73
+Your pyramid has disappeared again. That's okay - that is to be expected.
+
+Before you create your new loop, you need to learn about if statements. An if statement allows you to run a block of code only when a condition is met. They use the following syntax:
+
+if (condition) {
+  logic
+}
+
+Create an if statement with the boolean true as the condition. In the body, print the string "Condition is true".
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+/*for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}*/
+
+Step 74
+You'll see the string printed in the console, because true is in fact true.
+
+Change the condition of your if statement to the boolean false.
+
+if (true) {
+  console.log("Condition is true");
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+/*for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}*/
+
+Step 75
+Now the string is no longer printing, because false is not true. But what about other values?
+
+Try changing the condition to the string "false".
+
+if (false) {
+  console.log("Condition is true");
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
