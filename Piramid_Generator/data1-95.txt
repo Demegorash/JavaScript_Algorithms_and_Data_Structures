@@ -325,6 +325,26 @@ let rows = ["Naomi", "Quincy", "CamperChan"];
 
 console.log(rows);
 
+UPDATED 06/12/2024
+
+let character = 'Hello';
+let count = 8;
+let rows = ["Naomi", "Quincy", "CamperChan"];
+
+Step 23
+In the last few steps, you learned all about working with arrays. Take a moment to review what you have learned.
+
+Start by declaring a cities variable and initializing it as an array of the strings "London", "New York", and "Mumbai". Then log that variable to the console.
+
+After logging, change the last element of cities to the string "Mexico City", then log the cities variable again.
+
+When done correctly, you should see this output in the console.
+
+[ "London", "New York", "Mumbai" ]
+[ "London", "New York", "Mexico City" ]
+
+console.log(rows);
+
 ******************************************************************************************************************************************************************************
 
 let character = 'Hello';
@@ -1060,6 +1080,39 @@ console.log(call);
 
 for (let i = 0; i < count; i = i + 1) {
   rows.push(character.repeat(i + 1));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+UPDATED 06/12/2024
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(name) {
+  return name;
+}
+
+Step 54
+Before moving on, take a moment to review how functions work.
+
+Declare a function named addTwoNumbers. This function should take two arguments and return the sum of those two arguments.
+
+Then declare a sum variable and assign it the value of calling your addTwoNumbers function with 5 and 10 as the arguments. Log the sum variable to the console.
+
+const call = padRow("CamperChan");
+console.log(call);
+
+
+for (let i = 0; i < count; i = i + 1) {
+  rows.push(character.repeat(i + 1))
 }
 
 let result = ""
@@ -2290,6 +2343,192 @@ Update your condition to check if rows.length is less than or equal to count.
 let done = 0;
 
 while (done <= count) {
+  done++;
+  rows.push(padRow(done, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+/*for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}*/
+
+let continueLoop = false;
+let done = 0;
+
+Step 91Passed
+Since you have moved the comparison into the while condition, you can remove your entire if statement.
+
+while (done !== count) {
+  done++;
+  rows.push(padRow(done, count));
+  if (done === count) {
+    continueLoop = false;
+  } 
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+/*for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}*/
+
+Step 92Passed
+Your loop is no longer relying on the continueLoop variable. This makes the variable an unused declaration. Generally, you want to avoid unused declarations to prevent future confusion.
+
+Remove your continueLoop variable.
+
+let continueLoop = false;
+let done = 0;
+
+while (done !== count) {
+  done++;
+  rows.push(padRow(done, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+/*for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}*/
+
+Step 93Passed
+Your pyramid generator is still working. However, it could be possible to end up with an infinite loop again.
+
+Because you are only checking if done is not equal to count, if done were to be larger than count your loop would go on forever.
+
+Update your loop's condition to check if done is less than or equal to count.
+
+let done = 0;
+
+while (done !== count) {
+  done++;
+  rows.push(padRow(done, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+/*for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}*/
+
+Step 94
+Using done to track the number of rows that have been generated is functional, but you can actually clean up the logic a bit further.
+
+Arrays have a special length property that allows you to see how many values, or elements, are in the array. You would access this property using syntax like myArray.length.
+
+Update your condition to check if rows.length is less than or equal to count.
+
+let done = 0;
+
+while (rows.length <= count) {
+  done++;
+  rows.push(padRow(done, count));
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+/*for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}*/
+
+Step 95
+You can also replace the done reference in your padRow call.
+
+Note that rows.length here would give you an off-by-one error, because done is incremented before the call.
+
+So you'll need to replace done here with rows.length + 1. When you do this, you may see a Range Error, because we've created another off-by-one error.
+
+You'll need to change the while condition to use the less than operator, instead of the less than or equal operator.
+
+let done = 0;
+
+while (rows.length <= count) {
   done++;
   rows.push(padRow(done, count));
 }
