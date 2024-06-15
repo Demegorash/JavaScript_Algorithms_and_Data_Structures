@@ -2890,3 +2890,491 @@ console.log(result);
 
 ******************************************************************************************************************************************************************************
 
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+/*for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}*/
+
+/*while (rows.length < count) {
+  rows.push(padRow(rows.length + 1, count));
+}*/
+
+/*for (let i = count; i > 0; i--) {
+  rows.push(padRow(i, count));
+}*/
+
+Step 106
+The .unshift() method of an array allows you to add a value to the beginning of the array, unlike .push() which adds the value at the end of the array. Here is an example:
+
+Example Code
+const numbers = [1, 2, 3];
+numbers.unshift(5);
+
+The numbers array would now be [5, 1, 2, 3].
+
+Use const to declare an unshifted variable, and assign it the result of calling .unshift() on your numbers array. Pass 5 as the argument. Then print your unshifted variable.
+
+const numbers = [1, 2, 3];
+
+console.log(numbers);
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+/*for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}*/
+
+/*while (rows.length < count) {
+  rows.push(padRow(rows.length + 1, count));
+}*/
+
+/*for (let i = count; i > 0; i--) {
+  rows.push(padRow(i, count));
+}*/
+
+Step 107
+Notice that like .push(), .unshift() returns the new length of the array after the element is added.
+
+Arrays also have a .shift() method. This will remove the first element of the array, unlike .pop() which removes the last element. Here is an example of the .shift() method:
+
+Example Code
+const numbers = [1, 2, 3];
+numbers.shift();
+
+The numbers array would be [2, 3].
+
+Declare a shifted variable, assign it the result of calling .shift() on your numbers array, and print the variable.
+
+const numbers = [1, 2, 3];
+
+const unshifted = numbers.unshift(5);
+console.log(unshifted);
+console.log(numbers);
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+/*for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}*/
+
+/*while (rows.length < count) {
+  rows.push(padRow(rows.length + 1, count));
+}*/
+
+/*for (let i = count; i > 0; i--) {
+  rows.push(padRow(i, count));
+}*/
+
+Step 108
+Now that you've tried these methods, you can do another inverted pyramid approach. But first you need to clean up your experimentation.
+
+Remove your numbers array, and the method calls and log calls.
+
+const numbers = [1, 2, 3];
+const shifted = numbers.shift();
+console.log(shifted);
+const unshifted = numbers.unshift(5);
+console.log(unshifted);
+console.log(numbers);
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+Step 109
+Sometimes you may wish to bring back previous code that you commented out. You can do so by removing the /* and */ around that code. This is called uncommenting.
+
+Uncomment only your first for loop. Leave the single line comment and the other two multi line comments in place.
+
+// TODO: use a different type of loop
+/*for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}*/
+
+/*while (rows.length < count) {
+  rows.push(padRow(rows.length + 1, count));
+}*/
+
+/*for (let i = count; i > 0; i--) {
+  rows.push(padRow(i, count));
+}*/
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+
+Step 110
+Your pyramid is no longer inverted. This is because you are adding new rows to the end of the array.
+
+Update your loop body to add new rows to the beginning of the array.
+
+for (let i = 1; i <= count; i++) {
+  rows.push(padRow(i, count));
+}
+
+/*while (rows.length < count) {
+  rows.push(padRow(rows.length + 1, count));
+}*/
+
+/*for (let i = count; i > 0; i--) {
+  rows.push(padRow(i, count));
+}*/
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+
+Step 111
+What if you had a way to toggle between an inverted pyramid and a standard pyramid?
+
+Start by declaring an inverted variable, and assigning it the value true. You are not changing this variable in your code, but you will need to use let so our tests can modify it later.
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+for (let i = 1; i <= count; i++) {
+  rows.unshift(padRow(i, count));
+}
+
+/*while (rows.length < count) {
+  rows.push(padRow(rows.length + 1, count));
+}*/
+
+/*for (let i = count; i > 0; i--) {
+  rows.push(padRow(i, count));
+}*/
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+let inverted = true;
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+
+Step 112
+Use an if statement to check if inverted is true. Remember that you do not need to use an equality operator here.
+
+for (let i = 1; i <= count; i++) {
+
+  rows.unshift(padRow(i, count));
+}
+
+/*while (rows.length < count) {
+  rows.push(padRow(rows.length + 1, count));
+}*/
+
+/*for (let i = count; i > 0; i--) {
+  rows.push(padRow(i, count));
+}*/
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+let inverted = true;
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+
+Step 113
+Now move your .unshift() call into your if block.
+
+for (let i = 1; i <= count; i++) {
+  if (inverted) {
+
+  }
+  rows.unshift(padRow(i, count));
+}
+
+/*while (rows.length < count) {
+  rows.push(padRow(rows.length + 1, count));
+}*/
+
+/*for (let i = count; i > 0; i--) {
+  rows.push(padRow(i, count));
+}*/
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+let inverted = true;
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+
+Step 114
+If your pyramid is not inverted, then you will want to have an else block that builds the pyramid in the normal order.
+
+In earlier steps, you learned how to work with else statement like this:
+
+Example Code
+if (condition) {
+  // if condition is true, run this code
+} else {
+  // if condition is false, run this code
+}
+
+Add an else block to your if block.
+
+for (let i = 1; i <= count; i++) {
+  if (inverted) {
+    rows.unshift(padRow(i, count));
+  }
+
+}
+
+/*while (rows.length < count) {
+  rows.push(padRow(rows.length + 1, count));
+}*/
+
+/*for (let i = count; i > 0; i--) {
+  rows.push(padRow(i, count));
+}*/
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+let inverted = true;
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+// TODO: use a different type of loop
+
+Step 115
+When inverted is false, you want to build a standard pyramid. Use .push() like you have in previous steps to achieve this.
+
+for (let i = 1; i <= count; i++) {
+  if (inverted) {
+    rows.unshift(padRow(i, count));
+  } else {
+
+  }
+}
+
+/*while (rows.length < count) {
+  rows.push(padRow(rows.length + 1, count));
+}*/
+
+/*for (let i = count; i > 0; i--) {
+  rows.push(padRow(i, count));
+}*/
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+const character = "#";
+const count = 8;
+const rows = [];
+let inverted = true;
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+Step 116
+Your pyramid generator is now in a finished state, with more functionality than you originally planned! The next step is to clean up your code.
+
+Remove all comments, both single- and multi-line, from your code.
+
+// TODO: use a different type of loop
+for (let i = 1; i <= count; i++) {
+  if (inverted) {
+    rows.unshift(padRow(i, count));
+  } else {
+    rows.push(padRow(i, count));
+  }
+}
+
+/*while (rows.length < count) {
+  rows.push(padRow(rows.length + 1, count));
+}*/
+
+/*for (let i = count; i > 0; i--) {
+  rows.push(padRow(i, count));
+}*/
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
+
+Step 117
+Nice work! Experiment with different values for your character, count, and inverted variables.
+
+When you are ready to move on to your next project, set character to "!", count to 10, and inverted to false to continue.
+
+Congratulations on completing your first JavaScript project!
+
+const character = "#";
+const count = 8;
+const rows = [];
+let inverted = true;
+
+function padRow(rowNumber, rowCount) {
+  return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+}
+
+for (let i = 1; i <= count; i++) {
+  if (inverted) {
+    rows.unshift(padRow(i, count));
+  } else {
+    rows.push(padRow(i, count));
+  }
+}
+
+let result = ""
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
+
+console.log(result);
+
+******************************************************************************************************************************************************************************
