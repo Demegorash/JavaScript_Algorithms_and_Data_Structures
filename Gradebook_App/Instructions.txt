@@ -1,0 +1,40 @@
+This is the second section from https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/review-js-fundamentals-by-building-a-gradebook-app/step-1
+
+All credits to https://www.freecodecamp.org/
+
+This section are the exercises in order to learn and get it at hand for reference.
+
+Review JavaScript fundamentals by building a Gradebook app
+
+In this mini project, you will get to review JavaScript fundamentals like functions, variables, conditionals and more by building a gradebook app.
+
+This will give you an opportunity to solve small problems and get a better understanding of the basics.
+
+****************************************************************************************************************************************************
+
+Step 1
+A teacher has finished grading their students' tests and needs your help to calculate the average score for the class.
+
+Complete the getAverage function which takes in an array of test scores and returns the average score.
+
+The average is calculated by adding up all the scores and dividing by the total number of scores.
+
+Example Code
+average = sum of all scores / total number of scores
+
+A couple of function calls have been provided for you so you can test out your code.
+
+Tips
+
+You can use a loop to iterate over the scores array and add up all the scores.
+You can use the length property to get the total number of scores.
+
+function getAverage(scores) {
+
+}
+
+console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
+console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]));
+
+****************************************************************************************************************************************************
+
