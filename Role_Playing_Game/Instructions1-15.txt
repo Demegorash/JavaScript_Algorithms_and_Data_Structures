@@ -1,0 +1,140 @@
+All credits to https://www.freecodecamp.org
+I am learning and studing some fundaments on this plattform.  This time I am going to follow the instructions to create a Role Playing Game.
+https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-basic-javascript-by-building-a-role-playing-game/step-1
+
+********************************************************************************************************************************************
+Learn Basic JavaScript by Building a Role Playing Game
+
+JavaScript is a powerful scripting language that you can use to make web pages interactive. It's one of the core technologies of the web, along with HTML and CSS. All modern browsers support JavaScript.
+
+In this practice project, you'll learn fundamental programming concepts in JavaScript by coding your own Role Playing Game. You'll learn how to work with arrays, strings, objects, functions, loops, if/else statements, and more.
+
+********************************************************************************************************************************************
+
+Step 1
+JavaScript is a powerful language which allows you to build websites that are interactive.
+
+Note: For all remaining projects in this curriculum, you will need a basic level of knowledge in HTML and CSS. If you are new to HTML and CSS, please go through the Responsive Web Design Certification.
+
+To get started, create your standard HTML boilerplate with a DOCTYPE, html, head, and body, then add a meta tag for the charset. Add a title element and use the text RPG - Dragon Repeller for it. Include a link tag for your stylesheet to link the styles.css file.
+
+Finally, create a div element with id set to game within your body.
+
+********************************************************************************************************************************************
+
+Step 2
+Now you can start writing your JavaScript. Begin by creating a script element. This element is used to load JavaScript into your HTML file.
+
+Example Code
+
+<script>
+  // JavaScript code goes here
+</script>
+
+********************************************************************************************************************************************
+
+Step 3
+One of the most powerful tools is your developer console. Depending on your browser, this might be opened by pressing F12 or Ctrl+Shift+I. On Mac, you can press Option + ⌘ + C and select "Console". You can also click the "Console" button above the preview window to see our built-in console.
+
+The developer console will include errors that are produced by your code, but you can also use it to see values of variables in your code, which is helpful for debugging.
+
+Add a console.log("Hello World"); line between your script tags. Then click the "Console" button to open the console. You should see the text "Hello World".
+
+********************************************************************************************************************************************
+
+Step 4
+Before you start writing your project code, you should move it to its own file to keep things organized.
+
+Remove your console.log("Hello World"); line. Then give your now empty script element a src attribute set to ./script.js.
+
+********************************************************************************************************************************************
+
+Step 5
+Your view has been switched to your new script.js file. Remember that you can use the tabs above to switch between files.
+
+Add your console.log("Hello World"); line to this file, and see it appear in your console.
+
+********************************************************************************************************************************************
+
+Step 6
+Remove your console.log("Hello World"); line to begin writing your project code.
+
+In the previous project, you learned how to work with variables and the let keyword like this:
+
+Example Code
+
+let age = 32;
+
+Use the let keyword to declare a variable called xp and assign it the value of 0, a number.
+
+console.log("Hello World");
+
+********************************************************************************************************************************************
+
+Step 7
+Initialize another variable called health with a value of 100, and a variable called gold with a value of 50.
+
+********************************************************************************************************************************************
+
+Step 8
+Create another variable called currentWeaponIndex and set it to 0.
+
+********************************************************************************************************************************************
+
+Step 9
+Declare a variable called fighting but do not initialize it with a value.
+
+********************************************************************************************************************************************
+
+Step 10
+Declare two more variables named monsterHealth and inventory.
+
+For your inventory variable, assign it the value of an array containing the string "stick".
+
+Remember that you worked with arrays in the previous project like this:
+Example Code
+
+let exampleArray = ["first", "second", "third"];
+
+********************************************************************************************************************************************
+
+Step 11
+In your role playing game, users will be able to track their stats, buy weapons, and fight monsters. Before you can continue with the interactive JavaScript portion of the game, you need to first create the HTML elements that will display the game information.
+
+Create four div elements within your #game element. Give them the following respective id values, in order: stats, controls, monsterStats, and text.
+
+********************************************************************************************************************************************
+
+Step 12
+Create three span elements within your #stats element. Give each of them the class stat. Then give the first one the text XP: 0, the second one the text Health: 100, and the third one the text Gold: 50.
+
+********************************************************************************************************************************************
+
+Step 13
+Wrap the numbers 0, 100, and 50 in span elements, and wrap those new span elements in strong elements. Then give your new span elements id values of xpText, healthText, and goldText, respectively.
+
+Your answer should follow this basic structure:
+Example Code
+
+<span class="stat">TEXT <strong><span id="VALUE">TEXT</span></strong></span>
+
+********************************************************************************************************************************************
+
+Step 14
+For your #controls element, create three button elements. The first should have the id set to button1, and the text Go to store. The second should have the id set to button2, and the text Go to cave. The third should have the id set to button3, and the text Fight dragon.
+
+********************************************************************************************************************************************
+
+Step 15
+JavaScript interacts with the HTML using the Document Object Model, or DOM. The DOM is a tree of objects that represents the HTML. You can access the HTML using the document object, which represents your entire HTML document.
+
+One method for finding specific elements in your HTML is using the querySelector() method. The querySelector() method takes a CSS selector as an argument and returns the first element that matches that selector. For example, to find the <h1> element in your HTML, you would write:
+
+Example Code
+let h1 = document.querySelector("h1");
+
+Note that h1 is a string and matches the CSS selector you would use.
+
+Create a button1 variable and use querySelector() to assign it your element with the id of button1. Remember that CSS id selectors are prefixed with a #.
+
+********************************************************************************************************************************************
