@@ -138,3 +138,62 @@ Note that h1 is a string and matches the CSS selector you would use.
 Create a button1 variable and use querySelector() to assign it your element with the id of button1. Remember that CSS id selectors are prefixed with a #.
 
 ********************************************************************************************************************************************
+
+Step 16
+We have run into a slight problem. You are trying to query your page for a button element, but your script tag is in the head of your HTML. This means your code runs before the browser has finished reading the HTML, and your document.querySelector() will not see the button - because the browser hasn't processed it yet.
+
+To fix this, move your script element out of the head element, and place it at the end of your body element (just before the closing </body> tag.)
+
+********************************************************************************************************************************************
+
+Step 17
+button1 is a variable that is not going to be reassigned. If you are not going to assign a new value to a variable, it is best practice to use the const keyword to declare it instead of the let keyword. This will tell JavaScript to throw an error if you accidentally reassign it.
+
+Change your button1 variable to be declared with the const keyword.
+
+********************************************************************************************************************************************
+
+Step 18
+Use querySelector() to get the other two button elements using their ids: button2 and button3. Store them in variables called button2 and button3. Remember to use const.
+
+********************************************************************************************************************************************
+
+Step 19
+Similar to your #stats element, your #monsterStats element needs two span elements. Give them the class stat and give the first element the text Monster Name: and the second the text Health: . After the text in each, add a strong element with an empty nested span element. Give the first inner span element an id of monsterName and the second inner span element an id of monsterHealth.
+
+********************************************************************************************************************************************
+
+Step 20
+Example Code
+Give your #text element the following text:Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
+
+********************************************************************************************************************************************
+
+Step 21
+Now we need some quick styling. Start by giving the body a background-color set to #0a0a23.
+
+********************************************************************************************************************************************
+
+Step 22
+Give the #text element a background-color of #0a0a23, a color of #ffffff, and 10px of padding on all sides.
+
+********************************************************************************************************************************************
+
+Step 23
+Give your #game a maximum width of 500px and a maximum height of 400px. Set the background-color to #ffffff and the color to #ffffff.
+
+Use margins to center it by setting the top margin to 30px, bottom margin to 0px, and the left and right margin to auto.
+
+Finally, give it 10px of padding on all four sides.
+
+********************************************************************************************************************************************
+
+Step 24
+Using a selector list (selector1, selector2) give both your #controls and #stats elements a border of 1px solid #0a0a23, a #0a0a23 text color, and 5px of padding.
+
+********************************************************************************************************************************************
+
+Step 25
+Give your #monsterStats element the same border and padding as your #stats element. Set its color to #ffffff and give it a #c70d0d background.
+
+********************************************************************************************************************************************
