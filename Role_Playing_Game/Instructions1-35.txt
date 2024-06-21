@@ -197,3 +197,36 @@ Step 25
 Give your #monsterStats element the same border and padding as your #stats element. Set its color to #ffffff and give it a #c70d0d background.
 
 ********************************************************************************************************************************************
+
+Step 26
+For now, hide your #monsterStats element with the display property. Do not change any of the other styling.
+
+********************************************************************************************************************************************
+
+Step 27
+Next, give your .stat elements a padding-right of 10px.
+
+********************************************************************************************************************************************
+
+Step 28
+Finally, you will need to add some styles for your buttons. Start by setting the cursor property to pointer. Then set the text color to #0a0a23 and the background-color to #feac32.
+
+Then set the background-image property to linear-gradient(#fecc4c, #ffac33). Lastly, set the border to 3px solid #feac32.
+
+********************************************************************************************************************************************
+
+Step 29
+Just like you did with the buttons, create variables for the following ids and use querySelector() to give them the element as a value:
+
+text, xpText, healthText, goldText, monsterStats, and monsterName.
+
+Remember to declare these with the const keyword, and name the variables to match the ids.
+
+********************************************************************************************************************************************
+
+Step 30
+Finally, use querySelector() to get the #monsterHealth element. Because you have already declared a monsterHealth variable earlier, you need to use a different variable name for this element.
+
+Declare a new variable with the const keyword and name it monsterHealthText.
+
+********************************************************************************************************************************************
