@@ -230,3 +230,95 @@ Finally, use querySelector() to get the #monsterHealth element. Because you have
 Declare a new variable with the const keyword and name it monsterHealthText.
 
 ********************************************************************************************************************************************
+
+Step 31
+In the previous project, you learned how to create a function like this:
+
+Example Code:
+
+function functionName() {
+
+}
+
+Create an empty function named goStore.
+
+********************************************************************************************************************************************
+
+Step 32
+For now, make your goStore function output the message "Going to store." to the console.
+
+********************************************************************************************************************************************
+
+Step 33
+Now create a goCave function that prints "Going to cave." to the console.
+
+***************************************
+
+Step 34
+Now create a fightDragon function that prints "Fighting dragon." to the console.
+
+********************************************************************************************************************************************
+
+Step 35
+In the previous project, you learned how to work with single line and multi-line comments like this:
+
+Example Code:
+// I am a single-line comment
+
+/*
+  I am a multi-line comment
+*/
+
+Add a single-line comment that says initialize buttons.
+
+********************************************************************************************************************************************
+
+Step 36
+button1 represents your first button element. These elements have a special property called onclick, which you can use to determine what happens when someone clicks that button.
+
+You can access properties in JavaScript a couple of different ways. The first is with dot notation. Here is an example of using dot notation to set the onclick property of a button to a function reference.
+
+Example Code:
+
+button.onclick = myFunction;
+
+n this example, button is the button element, and myFunction is a reference to a function. When the button is clicked, myFunction will be called.
+
+Use dot notation to set the onclick property of your button1 to the function reference of goStore. Note that button1 is already declared, so you don't need to use let or const.
+
+********************************************************************************************************************************************
+
+Step 37
+Using the same syntax, set the onclick properties of button2 and button3 to goCave and fightDragon respectively.
+
+Once you have done that, open your console and try clicking the buttons on your project.
+
+********************************************************************************************************************************************
+
+Step 38
+The innerText property controls the text that appears in an HTML element. For example:
+
+Example Code:
+<p id="info">Demo content</p> 
+
+Example Code:
+const info = document.querySelector("#info"); 
+info.innerText = "Hello World"; 
+
+The following example would change the text of the p element from Demo content to Hello World.
+
+When a player clicks your Go to store button, you want to change the buttons and text. Remove the code inside the goStore function and add a line that updates the text of button1 to say "Buy 10 health (10 gold)".
+
+********************************************************************************************************************************************
+
+Step 39
+Now, add a line that updates the text of button2 to say "Buy weapon (30 gold)" and update the text of button3 to say "Go to town square".
+
+********************************************************************************************************************************************
+
+Step 40
+You will also need to update the functions that run when the buttons are clicked again.
+
+In your goStore() function, update the onclick property for each button to run buyHealth, buyWeapon, and goTown, respectively.
+
+********************************************************************************************************************************************
