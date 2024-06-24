@@ -322,3 +322,36 @@ You will also need to update the functions that run when the buttons are clicked
 In your goStore() function, update the onclick property for each button to run buyHealth, buyWeapon, and goTown, respectively.
 
 ********************************************************************************************************************************************
+
+Step 41
+Now you need to modify your display text. Change the innerText property of the text to be "You enter the store.".
+
+********************************************************************************************************************************************
+
+Step 42
+Create three new empty functions called buyHealth, buyWeapon, and goTown.
+
+********************************************************************************************************************************************
+
+Step 43
+Move your goTown function above your goStore function. Then copy and paste the contents of the goStore function into the goTown function.
+
+********************************************************************************************************************************************
+
+Step 44
+In your goTown function, change your button elements' innerText properties to be "Go to store", "Go to cave", and "Fight dragon". Update your onclick properties to be goStore, goCave, and fightDragon, respectively.
+
+Finally, update innerText property of your text to be "You are in the town square. You see a sign that says Store.".
+
+********************************************************************************************************************************************
+
+Step 45
+You need to wrap the text Store in double quotes. Because your string is already wrapped in double quotes, you'll need to escape the quotes around Store. You can escape them with a backslash \. Here is an example:
+
+Example Code:
+
+const escapedString = "Naomi likes to play \"Zelda\" sometimes.";
+
+Wrap the text Store in double quotes within your text.innerText line.
+
+********************************************************************************************************************************************
