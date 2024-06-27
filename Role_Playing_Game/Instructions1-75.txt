@@ -632,3 +632,36 @@ Step 70
 Create two more empty functions named fightSlime and fightBeast. These functions will be used in your upcoming cave object.
 
 ********************************************************************************************************************************************
+
+Step 71
+Add a third object to the locations array. Give it the same properties as the other two objects.
+
+Set name to cave. Set button text to an array with the strings "Fight slime", "Fight fanged beast", and "Go to town square". Set the "button functions" to an array with the variables fightSlime, fightBeast, and goTown. Set the text property to "You enter the cave. You see some monsters.".
+
+********************************************************************************************************************************************
+
+Step 72
+Now that you have a "cave" location object, update your goCave function to call update and pass that new "cave" location. Remember that this is the third element in your locations array.
+
+Don't forget to remove your console.log call!
+
+********************************************************************************************************************************************
+
+Step 73
+Now that your "store" and "cave" locations are complete, you can code the actions the player takes at those locations. Inside the buyHealth function, set gold equal to gold minus 10.
+
+For example, here is how you would set num equal to 5 less than num: num = num - 5;.
+
+********************************************************************************************************************************************
+
+Step 74
+After the gold is updated, add a line to set health equal to health plus 10.
+
+********************************************************************************************************************************************
+
+Step 75
+There is a shorthand way to add or subtract from a variable called compound assignment. For example, changing num = num + 5 to compound assignment would look like num += 5.
+
+Update both lines inside your buyHealth function to use compound assignment.
+
+********************************************************************************************************************************************

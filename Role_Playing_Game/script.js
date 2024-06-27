@@ -27,10 +27,16 @@ const locations = [
         text: "You are in the town square. You see a sign that says \"Store\".",
     },
     {
-       name: "store",
-       "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
-       "button functions": [buyHealth, buyWeapon, goTown],
-       text: "You enter the store.",
+        name: "store",
+        "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
+        "button functions": [buyHealth, buyWeapon, goTown],
+        text: "You enter the store.",
+    },
+    {
+        name: "cave",
+        "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
+        "button functions": [fightSlime, fightBeast, goTown],
+        text: "You enter the cave. You see some monsters.",  
     }
 ];
 
@@ -55,19 +61,20 @@ function goTown() {
 }
 
 function goStore() {
-    update(locations[1])
+    update(locations[1]);
 }
 
 function goCave() {
-    console.log("Going to cave.")
+    update(locations[2]);
 }
 
 function fightDragon() {
-    console.log("Fighting dragon.")
+    console.log("Fighting dragon.");
 }
 
 function buyHealth() {
-
+    gold += - 10;
+    health += + 10;
 }
 
 function buyWeapon() {
