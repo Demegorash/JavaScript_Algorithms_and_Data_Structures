@@ -913,3 +913,38 @@ console.log(num); // expected output: 1 (the global variable)
 Use the let keyword to create a variable named currentWeapon. Don't assign it a value yet.
 
 ********************************************************************************************************************************************
+
+Step 106
+In the previous project, you learned how to work with the shift() method to remove the first element from an array like this:
+
+Example Code:
+
+const myArray = ["first", "second", "third"];
+const firstElement = myArray.shift();
+// myArray is now ["second", "third"]
+
+Use the shift() method to take the first element from the inventory array and assign it to your currentWeapon variable.
+
+********************************************************************************************************************************************
+
+Step 107
+After your currentWeapon, use the concatenation operator to set text.innerText to the string "You sold a ", then currentWeapon, then the string ".".
+
+********************************************************************************************************************************************
+
+Step 108
+Now use the += operator to add the string " In your inventory you have: " and the contents of inventory to the text.innerText. Make sure to include the space at the beginning and end of the " In your inventory you have: " string.
+
+********************************************************************************************************************************************
+
+Step 109
+Use an else statement to run when the inventory length is not more than one. Set the text.innerText to say "Don't sell your only weapon!".
+
+********************************************************************************************************************************************
+
+Step 110
+Now you can start the code to fight monsters. To keep your code organized, your fightDragon function has been moved for you to be near the other fight functions.
+
+Below your weapons array, define a monsters variable and assign it an array. Set that array to have three objects, each with a name, level, and health properties. The first object's values should be "slime", 2, and 15, in order. The second should be "fanged beast", 8, and 60. The third should be "dragon", 20, and 300.
+
+********************************************************************************************************************************************
