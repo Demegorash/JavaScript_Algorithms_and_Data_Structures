@@ -948,3 +948,30 @@ Now you can start the code to fight monsters. To keep your code organized, your 
 Below your weapons array, define a monsters variable and assign it an array. Set that array to have three objects, each with a name, level, and health properties. The first object's values should be "slime", 2, and 15, in order. The second should be "fanged beast", 8, and 60. The third should be "dragon", 20, and 300.
 
 ********************************************************************************************************************************************
+
+Step 111
+Fighting each type of monster will use similar logic. Create an empty function called goFight to manage this logic.
+
+********************************************************************************************************************************************
+
+Step 112
+In your fightSlime function, set fighting equal to 0 - the index of slime in the monsters array. Remember that you already declared fighting earlier in your code, so you do not need let or const here.
+
+On the next line, call the goFight function.
+
+********************************************************************************************************************************************
+
+Step 113
+Following the same pattern as the fightSlime function, use that code in the fightBeast and fightDragon functions. Remember that beast is at index 1 and dragon is at index 2. Also, remove the console.log call from your fightDragon function.
+
+********************************************************************************************************************************************
+
+Step 114
+At the end of your code, create two empty functions named attack and dodge.
+
+********************************************************************************************************************************************
+
+Step 115
+Add a new object to the end of the locations array, following the same properties as the rest of the objects. Set name to "fight", "button text" to an array with "Attack", "Dodge", and "Run", "button functions" to an array with attack, dodge, and goTown, and text to "You are fighting a monster.".
+
+********************************************************************************************************************************************
