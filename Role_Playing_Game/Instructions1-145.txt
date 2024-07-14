@@ -1145,3 +1145,42 @@ Back to your attack function - inside the else if block, create another if and e
 For this step, you will need to use the strict equality (===) operator to check if fighting is equal to 2.
 
 ********************************************************************************************************************************************
+
+Step 141
+In order for the &#x2620; emoticon text to properly display on the page, you will need to use the innerHTML property.
+
+The innerHTML property allows you to access or modify the content inside an HTML element using JavaScript.
+
+Here is an example of updating the content for this paragraph element using the innerHTML property.
+
+Example Code:
+
+<p id="demo">This is a paragraph.</p>
+
+document.querySelector("#demo").innerHTML = "Hello, innerHTML!";
+
+In the update function, change text.innerText to text.innerHTML.
+
+********************************************************************************************************************************************
+
+Step 142
+After the lose function, create a function called winGame. Inside the winGame function, call the update function and pass in locations[6].
+
+********************************************************************************************************************************************
+
+Step 143
+Add another object in the locations array. Everything should be the same as the lose object, except the name should be "win" and the text should be "You defeat the dragon! YOU WIN THE GAME! &#x1F389;".
+
+********************************************************************************************************************************************
+
+Step 144
+While your game is feature-complete at this stage, there are things you can do to make it more fun and engaging. To get started, you'll give monsters a dynamic attack value.
+
+Inside your attack function, change your health -= monsters[fighting].level; line to health -= getMonsterAttackValue(monsters[fighting].level);. This sets health equal to health minus the return value of the getMonsterAttackValue function, and passes the level of the monster as an argument.
+
+********************************************************************************************************************************************
+
+Step 145
+Below your attack function, create an empty function named getMonsterAttackValue. It should take level as a parameter.
+
+********************************************************************************************************************************************
