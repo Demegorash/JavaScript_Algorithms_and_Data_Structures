@@ -1184,3 +1184,56 @@ Step 145
 Below your attack function, create an empty function named getMonsterAttackValue. It should take level as a parameter.
 
 ********************************************************************************************************************************************
+
+Step 146
+The attack of the monster will be based on the monster's level and the player's xp. In the getMonsterAttackValue function, use const to create a variable called hit. Assign it the equation (level * 5) - (Math.floor(Math.random() * xp));.
+
+This will set the monster's attack to five times their level minus a random number between 0 and the player's xp.
+
+********************************************************************************************************************************************
+
+Step 147
+Log the value of hit to the console to use in debugging. Remember that you can do this with console.log().
+
+********************************************************************************************************************************************
+
+Step 148
+In the previous project, you learned how to work with the return keyword to return a value from a function like this:
+
+Example Code:
+
+function add(num1, num2) {
+  return num1 + num2;
+}
+
+Use the return keyword to return the value of hit at the end of the function.
+
+********************************************************************************************************************************************
+
+Step 149
+If you play the game in its current state you might notice a bug. If your xp is high enough, the getMonsterAttackValue function will return a negative number, which will actually add to your total health when fighting a monster! You can fix this issue by using a ternary operator to ensure negative values are not returned.
+
+The ternary operator is a conditional operator and can be used as a one-line if-else statement. The syntax is: condition ? expressionIfTrue : expressionIfFalse.
+
+Here is an example of returning a value using an if-else statement and a refactored example using a ternary operator:
+
+Example Code:
+
+// if-else statement
+if (score > 0) {
+  return score
+} else {
+  return default_score
+}
+
+// ternary operator
+return score > 0 ? score : default_score
+
+In getMonsterAttackValue, change return hit to a ternary operator that returns hit if hit is greater than 0, or returns 0 if it is not.
+
+********************************************************************************************************************************************
+
+Step 150
+In your attack function, find the line of code that updates the monsterHealth variable and place it within an if block with a condition that calls the isMonsterHit function.
+
+********************************************************************************************************************************************
