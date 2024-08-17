@@ -17,10 +17,8 @@ function isInvalidInput(str) {
     return str.match(regex);
 }
 
-/*  This will be in order to check if the regex is giving a null result
-console.log(isInvalidInput("10"));*/
-
 function addEntry() {
-    const targetId = "#" + entryDropdown.value;
-    const targetInputContainer = document.querySelector(targetId + " .input-container");
+    const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
+    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+    const HTMLString = ``;
 }
